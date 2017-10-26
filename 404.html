@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>404 —— 页面不存在</title>
+<link rel="stylesheet" type="text/css" href="http://obj.iaozi.com/css/error.css">
+<script type="text/javascript">
+	var num=6;
+	function redirect(){
+		num--;
+		document.getElementById("num").innerHTML=num;
+		if(num<0){
+			document.getElementById("num").innerHTML=0;
+			location.href="/";
+			}
+		}
+	setInterval("redirect()", 1000);
+</script>
+</head>
+<body onLoad="redirect();">
+<div class="whole">
+	<img src="http://obj.iaozi.com/images/bj.jpg" />
+    <div class="mask"></div>
+</div>
+<div class="b">
+		<img src="http://obj.iaozi.com/images/404.png" class="center"/>
+		<p>
+			暂时未能找到您查找的页面<br>
+			可能输入的网址错误或此页面不存在<br>Not Found
+			<br>
+            <span id="num"></span>秒后自动跳转到主页
+		</p>
+	</div>
+<div class="c">技术支持：<a href="http://iaozi.com" target="_blank" >艾奥兹</a></div>
+</body>
+</html>
